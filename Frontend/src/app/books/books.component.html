@@ -1,0 +1,30 @@
+<div class="container container-fluid">
+    <div class="row mt-4 text-center" *ngIf="processedBooks">
+            <div class="col-md-4"  *ngFor="let book of processedBooks">
+                <div class="card" >
+                    <div class="card-header">
+                        <h2>{{book.title}}
+                              
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        
+                        <img [src]="book.imageUrl"  [style]="{width:'200px',height:'275px'}">
+                     
+                        
+                      <h5>Author: {{book.author}}</h5>
+                        <h5>Publish Date: {{book.publishDate}}</h5>
+                        <h5>No. of Pages: {{book.pages}}</h5>
+
+                        <button class="btn btn-info" (click)="edit(book)"> <i class="bi bi-pencil-square text-end"></i></button>
+                        <button class="btn btn-danger" mat-button (click)="delete(book)"><i class="bi bi-trash3"></i></button>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+      
+</div>
+<p class="text text-danger">{{errorMessage}}<p>

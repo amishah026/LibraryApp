@@ -1,0 +1,7 @@
+<div class="mat-dialog-container">
+  <p mat-dialog-content [style]="{color:'black'}">Are you sure you want to delete? This action cannot be undone.</p>
+  <div mat-dialog-actions>
+    <button mat-button class="btn btn-info" (click)="onCancel()">Cancel</button>
+    <button mat-button class="btn btn-danger" (click)="onDelete()">Delete</button>
+  </div>
+</div>
